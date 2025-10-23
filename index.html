@@ -8,22 +8,15 @@
      <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <div id="message-box">
+    <h2 id="game-title">Memory Card Game</h2>
+    <div id="wrapper">
+        <div class="board-game">
+            <!-- cells section  -->
         </div>
-        <div class="board">
-            <span id="1" class="b-right b-bottom"></span>
-            <span id="2" class="b-bottom"></span>
-            <span id="3" class="b-left b-bottom"></span>
-            <span id="4" class="b-right"></span>
-            <span id="5" class=""></span>
-            <span id="6" class="b-left"></span>
-            <span id="7" class="b-top b-right"></span>
-            <span id="8" class="b-top"></span>
-            <span id="9" class="b-left b-top"></span>
-        </div>
-        <button id="b-new-game" class="btn">start new game</button>
     </div>
+    <button class="btn btn-reset-game">Reset Game</button>
+    <audio id="pair" src="./audio/pair.mp3"></audio>
+    <audio id="winner" src="./audio/winner.mp3"></audio>
 </body>
 <script src="./js/script.js"></script>
 </html>

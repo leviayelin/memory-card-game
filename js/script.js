@@ -2,7 +2,7 @@
 // getting game board element
 const gameBoard = document.querySelector('.board-game');
 // getting reset button element 
-const btnResetGame  = document.querySelector('.btn-reset-game');
+const btnResetGame = document.querySelector('.btn-reset-game');
 // Symbols list - creating a list of images/icons/symbols
 const symbols = ['🦊','🐶','🐸','🐔','🏠','🤖','👻','🛻'];
 // Duplicate - creating another list set of the same list 
@@ -12,6 +12,8 @@ let firstCard,secondCard; // card 1 , card 2
 let lockBoard = false;
 let matchedPairs = 0; // counter - indicator for matches 
 let congrateGif = 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMms2N3FsbWRtYXZmYTV4NzBoZTJtbDN1ejMyNWZuOXRzY3pnNTVieiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/s2qXK8wAvkHTO/giphy.gif';
+const pairSound = document.getElementById('pair');
+const winSound = document.getElementById('winner');
 
 // Function section 
 // Board game - adding cards 
@@ -63,14 +65,16 @@ const checkForMatch = () =>{
     // 2. if not match do
     if(isMatch){
         disableCards(); // disable matching cards
+        // pairSound.play();
         matchedPairs++; // add 1 to counter
         // checking for wining condition
         if(matchedPairs === symbols.length){
-           setTimeout(()=>{
+            winSound.play();
+            setTimeout(()=>{
                 gameBoard.innerHTML = `
                 <div class="winner">                
-                    <img src='${congrate}'/>
-                    <div>You Win!</div>
+                <img src='${congrateGif}'/>
+                <div>You Win!</div>
                 </div>
                 `;
            },500); 

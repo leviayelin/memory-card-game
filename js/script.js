@@ -65,7 +65,7 @@ const checkForMatch = () =>{
     // 2. if not match do
     if(isMatch){
         disableCards(); // disable matching cards
-        // pairSound.play();
+        pairSound.play();
         matchedPairs++; // add 1 to counter
         // checking for wining condition
         if(matchedPairs === symbols.length){

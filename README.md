@@ -1,13 +1,13 @@
-# memory card game
-### about 
+# 🃏 memory card game
+### 🧑‍💻 about 
 A simple memory card game 
 ##
-### technology used
+### ⚙️ technology used
 - HTML
 - CSS 
 - JAVASCRIPT
 ##
-### features
+### ➕ features
 a simple 1 player game :
 - a board game
 - reset game button
